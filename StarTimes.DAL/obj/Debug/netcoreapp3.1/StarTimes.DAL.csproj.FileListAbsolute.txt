@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\bin\Debug\netcoreapp3.1\StarTimes.DAL.deps.json
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\bin\Debug\netcoreapp3.1\StarTimes.DAL.runtimeconfig.json
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\bin\Debug\netcoreapp3.1\StarTimes.DAL.runtimeconfig.dev.json
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\bin\Debug\netcoreapp3.1\StarTimes.DAL.dll
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\bin\Debug\netcoreapp3.1\StarTimes.DAL.pdb
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\obj\Debug\netcoreapp3.1\StarTimes.DAL.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\obj\Debug\netcoreapp3.1\StarTimes.DAL.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\obj\Debug\netcoreapp3.1\StarTimes.DAL.AssemblyInfo.cs
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\obj\Debug\netcoreapp3.1\StarTimes.DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\obj\Debug\netcoreapp3.1\StarTimes.DAL.dll
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\obj\Debug\netcoreapp3.1\StarTimes.DAL.pdb
+C:\Users\User\source\repos\Pesapal.StarTimes\StarTimes.DAL\obj\Debug\netcoreapp3.1\StarTimes.DAL.genruntimeconfig.cache

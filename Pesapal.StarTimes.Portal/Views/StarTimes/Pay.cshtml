@@ -1,0 +1,118 @@
+﻿@model Pesapal.StarTimes.Portal.Models.StarTimeRequest
+
+@{
+    ViewData["Title"] = "Pay";
+}
+
+<h1>Pay</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label asp-for="Service_code" class="control-label"></label>
+                    <input asp-for="Service_code" class="form-control" />
+                    <span asp-validation-for="Service_code" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Go" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Pay">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none">
+                <label asp-for="Service_code" class="control-label"></label>
+                <input asp-for="Service_code" class="form-control" />
+                <span asp-validation-for="Service_code" class="text-danger"></span>
+            </div>
+            @if (ViewBag.verify != null)
+            {
+                <div class="form-group">
+                    <label asp-for="Amount" class="control-label"></label>
+                    <input asp-for="Amount" class="form-control" />
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="New_package_code" class="control-label"></label>
+                    <select name="New_package_code" class="form-control" asp-items="@ViewBag.packageList"></select>
+                    <span asp-validation-for="New_package_code" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Firstname" class="control-label"></label>
+                    <input asp-for="Firstname" class="form-control" />
+                    <span asp-validation-for="Firstname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Lastname" class="control-label"></label>
+                    <input asp-for="Lastname" class="form-control" />
+                    <span asp-validation-for="Lastname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mobile" class="control-label"></label>
+                    <input asp-for="Mobile" class="form-control" />
+                    <span asp-validation-for="Mobile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Proceed to pay" class="btn btn-primary" />
+                </div>
+
+            }
+            else
+            {
+                <div class="form-group">
+                    <label asp-for="Amount" class="control-label"></label>
+                    <input asp-for="Amount" class="form-control" readonly />
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="New_package_code" class="control-label"></label>
+                    <select name="New_package_code" class="form-control" asp-items="@ViewBag.packageList"></select>
+                    <span asp-validation-for="New_package_code" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Firstname" class="control-label"></label>
+                    <input asp-for="Firstname" class="form-control" readonly/>
+                    <span asp-validation-for="Firstname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Lastname" class="control-label"></label>
+                    <input asp-for="Lastname" class="form-control" readonly/>
+                    <span asp-validation-for="Lastname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mobile" class="control-label"></label>
+                    <input asp-for="Mobile" class="form-control"readonly />
+                    <span asp-validation-for="Mobile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" readonly />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+                    <input type="submit" value="Proceed to pay" class="btn btn-primary" />
+                </div>*@
+            }
+   
+        </form>
+    </div>
+</div>
+
+
+

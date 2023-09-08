@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>d0958077-8490-4bc6-88fd-c73d0e79e427</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>StarTimes.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\ApiIpnRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\ApiOrderRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\KeyVerificationTokenRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\MerchantNotificationApiCreateRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\StarTimesApiRechargeRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\StarTimesCheckStatusRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\StarTimesRechargeRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\StarTimesReplaceablePackageRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\TokenRequestApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\TransactionAdminSearchRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiRequest\TransactionCreateRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\ApiCredentialsResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\ApiIpnListResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\ApiIpnReceivedResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\ApiIpnResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\BaseResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\KeyVerificationTokenResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\PaymentQueryApiResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesApiRechargeResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesApiReplaceablePackagesResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesCheckStatusResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesErrorResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesQueryPackageRechargeInfoListResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesQueryPackageRechargeInfoResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesQueryPartnerTransactionsResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesQuerySubscriberResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesRechargeResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesReplaceableItemListResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\StarTimesReplaceableItemResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\SubmitOrderResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\TokenResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\TransactionDetailListResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\TransactionDetailsResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiResponse\TransactionStatusInfoResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DTOs\NotificationDetailDTO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DTOs\SubscriberPaymentInfoDTO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DTOs\SubscriberTransactionDetailDTO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\HttpRequestMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\PaymentStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\StarTimePostStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\StatusCodes.cs" />
+  </ItemGroup>
+</Project>

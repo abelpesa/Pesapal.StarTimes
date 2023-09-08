@@ -1,0 +1,120 @@
+﻿@model Pesapal.StarTimes.Portal.Models.TransactionAdminViewModel
+@using StarTimes.Shared.Enums
+@{
+    ViewData["Title"] = "Index";
+}
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            //$('.datepicker').datepicker(
+            //    {
+            //        dateFormat: "yy-mm-dd",
+            //        changeMonth: true,
+            //        changeYear: true
+            //    }); //Initialise any date pickers
+
+            $('#myTable').DataTable({
+                "search": "true",
+            "PaginationType":"full_numbers"});
+           // new DataTable('#myTable');
+        });
+    </script>
+
+}
+
+    
+
+
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group row">
+                <div class="form-group">
+                    <label asp-for="transactionAdminSearchRequest.DateFrom" class="control-label"></label>
+                    @*<input asp-for="transactionAdminSearchRequest.DateFrom" type="date" name="Date" class="form-control" />*@
+                    <input type="date" name="dateFrom" class="form-control" id="dateFrom" />
+
+                    <span asp-validation-for="transactionAdminSearchRequest.DateFrom" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="transactionAdminSearchRequest.DateTo" class="control-label"></label>
+                    @*<input asp-for="transactionAdminSearchRequest.DateTo" type="date" name="Date" class="form-control" />*@
+                    @*@Html.Editor("dateTo", "", new { htmlAttributes = new { @class = "form-control" , @readonly = true } })*@
+                    <input type="date" name="dateTo" class="form-control" id="dateTo"/>
+
+                    <span asp-validation-for="transactionAdminSearchRequest.DateTo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="transactionAdminSearchRequest.ConfirmationCode" class="control-label"></label>
+                    <input asp-for="transactionAdminSearchRequest.ConfirmationCode" class="form-control" />
+                    <span asp-validation-for="transactionAdminSearchRequest.ConfirmationCode" class="text-danger"></span>
+                </div>
+
+
+            </div>
+            <div class="form-group">
+                <label class="control-label"></label>
+
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+    <div class="table-responsive">
+
+
+
+        <table id="myTable" class="table table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Confirmation Code</th>
+                    <th>Status</th>
+                    <th>Payment Method</th>
+                    <th>Reference</th>
+                    <th>Sent to Startimes</th>
+                    <th>Amount</th>
+                    <th>Transaction Date</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model.transactionDetailListResponse)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ConfirmationCode)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PaymentMethod)</td>
+                        <td>@Html.DisplayFor(modelItem => item.MerchantReference)</td>
+                        <td>
+                            @if (item.Posted == (byte)StarTimePostStatus.NotPosted)
+                            {
+                                <div>Not Posted</div>
+
+                            }
+                            else
+                            {
+                                <div>Posted</div>
+
+                            }
+
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.Currency) @Html.DisplayFor(modelItem => item.Amount)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Date)</td>
+
+                    </tr>
+
+
+                }
+
+
+            </tbody>
+
+        </table>
+    </div>
+
+
